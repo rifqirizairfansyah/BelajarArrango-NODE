@@ -22,25 +22,24 @@ app.use(bodyParser.json());
 
 // Connection to ArangoDB
 const db = new arangojs.Database({
-	url: `http://${dbConfig.host}:${dbConfig.port}`,
-	databaseName: dbConfig.database
+	url: `http://${dbConfig.host}:${dbConfig.port}`
 });
 
 db.useBasicAuth(dbConfig.username, dbConfig.password);
+db.useDatabase('testerrifqi');
 
 // START THE SERVER
 app.listen(port, function(){
 	console.log('Magic happens on port ' + port);
 });
 
-const taskCollection = db.collection('hoho');
+const taskCollection = db.collection('rumah');
 
 app.get('/api/tasks', function(req, res){
 	taskCollection
 		.all()
 		.then(function(response) {
 			console.log(`Retrieved documents.`, response._result);
-
 			return res.status(200).json(response._result);
 		})
 		.catch(function(error) {
