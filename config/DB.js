@@ -1,3 +1,7 @@
 module.exports = {
-    DB: 'http://localhost:8529',
+    host: '127.0.0.1',
+    port: '8529',
+    username: 'root',
+    password: '',
+    database: 'testerrifqi',
 };
