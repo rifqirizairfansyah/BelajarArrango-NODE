@@ -1,0 +1,17 @@
+{
+  "name": "belajar-01",
+  "version": "1.0.0",
+  "description": "Arrango DB",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rifqi Riza Irfansyah",
+  "license": "ISC",
+  "dependencies": {
+    "arangojs": "^6.10.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "express-generator": "^4.16.0"
+  }
+}
